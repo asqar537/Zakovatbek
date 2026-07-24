@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>Zakovat Jurnali</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Zakovat" />
+<meta name="theme-color" content="#16302A" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQ0IiBmaWxsPSIjMTYzMDJBIi8+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI3OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDlBOTU0IiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9IjAuMzUiLz4KCiAgPCEtLSBPd2wgYm9keSAtLT4KICA8Zz4KICAgIDxlbGxpcHNlIGN4PSIxMDAiIGN5PSIxMjIiIHJ4PSI1NiIgcnk9IjUwIiBmaWxsPSIjRDlBOTU0Ii8+CgogICAgPCEtLSBleWVzIC0tPgogICAgPGNpcmNsZSBjeD0iNzgiIGN5PSIxMTIiIHI9IjIyIiBmaWxsPSIjMTYzMDJBIi8+CiAgICA8Y2lyY2xlIGN4PSIxMjIiIGN5PSIxMTIiIHI9IjIyIiBmaWxsPSIjMTYzMDJBIi8+CiAgICA8Y2lyY2xlIGN4PSI3OCIgY3k9IjExMiIgcj0iOSIgZmlsbD0iI0YyRUZFNiIvPgogICAgPGNpcmNsZSBjeD0iMTIyIiBjeT0iMTEyIiByPSI5IiBmaWxsPSIjRjJFRkU2Ii8+CgogICAgPCEtLSBiZWFrIC0tPgogICAgPHBhdGggZD0iTTEwMCAxMjYgTDExMSAxNDIgTDg5IDE0MiBaIiBmaWxsPSIjMTYzMDJBIi8+CgogICAgPCEtLSB3aW5ncyAtLT4KICAgIDxwYXRoIGQ9Ik00NiAxMjggQyA0MCAxNDgsIDQ2IDE2NCwgNjIgMTcwIEMgNTQgMTU0LCA1MiAxMzgsIDU4IDEyNCBaIiBmaWxsPSIjQjg4NjNFIi8+CiAgICA8cGF0aCBkPSJNMTU0IDEyOCBDIDE2MCAxNDgsIDE1NCAxNjQsIDEzOCAxNzAgQyAxNDYgMTU0LCAxNDggMTM4LCAxNDIgMTI0IFoiIGZpbGw9IiNCODg2M0UiLz4KICA8L2c+CgogIDwhLS0gZ3JhZHVhdGlvbiBjYXAgLS0+CiAgPGc+CiAgICA8cGF0aCBkPSJNMTAwIDM0IEwxNDYgNTQgTDEwMCA3NCBMNTQgNTQgWiIgZmlsbD0iI0YyRUZFNiIvPgogICAgPHBhdGggZD0iTTc2IDYwIEw3NiA3NCBDIDc2IDgyLCA4NyA4OCwgMTAwIDg4IEMgMTEzIDg4LCAxMjQgODIsIDEyNCA3NCBMMTI0IDYwIEwxMDAgNzAgWiIgZmlsbD0iI0YyRUZFNiIvPgogICAgPGxpbmUgeDE9IjE0NiIgeTE9IjU0IiB4Mj0iMTQ2IiB5Mj0iNzYiIHN0cm9rZT0iI0YyRUZFNiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSIxNDYiIGN5PSI4MCIgcj0iNCIgZmlsbD0iI0YyRUZFNiIvPgogIDwvZz4KPC9zdmc+Cg==" />
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQ0IiBmaWxsPSIjMTYzMDJBIi8+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI3OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDlBOTU0IiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9IjAuMzUiLz4KCiAgPCEtLSBPd2wgYm9keSAtLT4KICA8Zz4KICAgIDxlbGxpcHNlIGN4PSIxMDAiIGN5PSIxMjIiIHJ4PSI1NiIgcnk9IjUwIiBmaWxsPSIjRDlBOTU0Ii8+CgogICAgPCEtLSBleWVzIC0tPgogICAgPGNpcmNsZSBjeD0iNzgiIGN5PSIxMTIiIHI9IjIyIiBmaWxsPSIjMTYzMDJBIi8+CiAgICA8Y2lyY2xlIGN4PSIxMjIiIGN5PSIxMTIiIHI9IjIyIiBmaWxsPSIjMTYzMDJBIi8+CiAgICA8Y2lyY2xlIGN4PSI3OCIgY3k9IjExMiIgcj0iOSIgZmlsbD0iI0YyRUZFNiIvPgogICAgPGNpcmNsZSBjeD0iMTIyIiBjeT0iMTEyIiByPSI5IiBmaWxsPSIjRjJFRkU2Ii8+CgogICAgPCEtLSBiZWFrIC0tPgogICAgPHBhdGggZD0iTTEwMCAxMjYgTDExMSAxNDIgTDg5IDE0MiBaIiBmaWxsPSIjMTYzMDJBIi8+CgogICAgPCEtLSB3aW5ncyAtLT4KICAgIDxwYXRoIGQ9Ik00NiAxMjggQyA0MCAxNDgsIDQ2IDE2NCwgNjIgMTcwIEMgNTQgMTU0LCA1MiAxMzgsIDU4IDEyNCBaIiBmaWxsPSIjQjg4NjNFIi8+CiAgICA8cGF0aCBkPSJNMTU0IDEyOCBDIDE2MCAxNDgsIDE1NCAxNjQsIDEzOCAxNzAgQyAxNDYgMTU0LCAxNDggMTM4LCAxNDIgMTI0IFoiIGZpbGw9IiNCODg2M0UiLz4KICA8L2c+CgogIDwhLS0gZ3JhZHVhdGlvbiBjYXAgLS0+CiAgPGc+CiAgICA8cGF0aCBkPSJNMTAwIDM0IEwxNDYgNTQgTDEwMCA3NCBMNTQgNTQgWiIgZmlsbD0iI0YyRUZFNiIvPgogICAgPHBhdGggZD0iTTc2IDYwIEw3NiA3NCBDIDc2IDgyLCA4NyA4OCwgMTAwIDg4IEMgMTEzIDg4LCAxMjQgODIsIDEyNCA3NCBMMTI0IDYwIEwxMDAgNzAgWiIgZmlsbD0iI0YyRUZFNiIvPgogICAgPGxpbmUgeDE9IjE0NiIgeTE9IjU0IiB4Mj0iMTQ2IiB5Mj0iNzYiIHN0cm9rZT0iI0YyRUZFNiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSIxNDYiIGN5PSI4MCIgcj0iNCIgZmlsbD0iI0YyRUZFNiIvPgogIDwvZz4KPC9zdmc+Cg==" />
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #16302A;
+    color: #F2EFE6;
+    font-family: 'Georgia', 'Iowan Old Style', ui-serif, serif;
+    min-height: 100vh;
+  }
+  input:focus { outline: none; }
+  ::placeholder { color: #6E8A7F; }
+  button { font-family: inherit; cursor: pointer; }
+
+  .header {
+    padding: 28px 20px 18px;
+    border-bottom: 2px dashed #3E5A50;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: #D9A954;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 20px;
+  }
+  .title { font-size: 22px; font-weight: 700; margin: 0; letter-spacing: 0.3px;
+    font-family: 'Palatino Linotype', 'Georgia', serif; }
+  .subtitle { margin: 2px 0 0; font-size: 12.5px; color: #9DB3A8; letter-spacing: 0.4px; }
+
+  .tabs { display: flex; padding: 10px 14px 0; gap: 6px; }
+  .tab-btn {
+    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
+    padding: 10px 4px; border-radius: 10px 10px 0 0; border: none;
+    background: transparent; color: #7E9A8F; font-weight: 500; font-size: 12.5px;
+  }
+  .tab-btn.active { background: #1F3D34; color: #D9A954; font-weight: 700; }
+  .tab-icon { font-size: 17px; line-height: 1; }
+
+  .content {
+    background: #1F3D34; border-radius: 14px 14px 0 0;
+    padding: 20px 16px 40px; min-height: calc(100vh - 140px);
+  }
+
+  .row { display: flex; gap: 8px; margin-bottom: 18px; }
+  .text-input {
+    flex: 1; padding: 12px 14px; border-radius: 10px;
+    border: 1px solid #3E5A50; background: #16302A; color: #F2EFE6;
+    font-size: 15px; font-family: inherit;
+  }
+  .icon-btn-gold {
+    background: #D9A954; border: none; border-radius: 10px; width: 46px;
+    display: flex; align-items: center; justify-content: center; font-size: 20px; color: #16302A; font-weight: 700;
+  }
+
+  .empty { text-align: center; padding: 40px 20px; color: #7E9A8F; font-size: 14px; line-height: 1.5; }
+
+  .team-item {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #16302A; border: 1px solid #2C4A40; border-radius: 10px;
+    padding: 12px 14px; margin-bottom: 8px;
+  }
+  .team-left { display: flex; align-items: center; gap: 10px; }
+  .badge {
+    width: 26px; height: 26px; border-radius: 7px; background: #2C4A40;
+    color: #D9A954; font-size: 12.5px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .team-name { font-size: 15.5px; }
+  .del-btn { background: transparent; border: none; color: #C1533D; padding: 6px; font-size: 16px; }
+
+  .week-chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 6px; }
+  .chip {
+    flex-shrink: 0; padding: 8px 14px; border-radius: 20px;
+    border: 1px solid #3E5A50; background: transparent; color: #9DB3A8;
+    font-weight: 600; font-size: 13.5px; white-space: nowrap;
+  }
+  .chip.active { border: 1px solid #D9A954; background: #D9A954; color: #16302A; }
+  .chip-add { border: 1px dashed #D9A954; color: #D9A954; display: flex; align-items: center; gap: 4px; }
+
+  .week-title-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+  .week-title-input {
+    font-size: 16px; font-weight: 700; background: transparent; border: none;
+    border-bottom: 1px solid #3E5A50; color: #D9A954; padding: 4px 2px;
+    font-family: inherit; flex: 1;
+  }
+
+  .calc-btn {
+    width: 100%; padding: 14px; border-radius: 12px; border: none;
+    background: #D9A954; color: #16302A; font-weight: 700; font-size: 15.5px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    margin-bottom: 20px;
+  }
+  .calc-btn:disabled { background: #3E5A50; color: #9DB3A8; }
+
+  .result-item {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #16302A; border: 1px solid #2C4A40; border-radius: 10px;
+    padding: 13px 14px; margin-bottom: 8px;
+  }
+  .result-item.first { background: #2C4A40; border: 1px solid #D9A954; }
+  .rank-num { width: 19px; text-align: center; color: #7E9A8F; font-size: 13px; font-weight: 700; }
+  .result-name { font-size: 15.5px; }
+  .result-name.first { font-weight: 700; }
+  .result-total { font-size: 17px; font-weight: 700; color: #F2EFE6; }
+  .result-total.first { color: #D9A954; }
+  .hint { font-size: 12.5px; color: #9DB3A8; margin-bottom: 4px; }
+
+  /* Question-based scoring */
+  .team-score-card {
+    background: #16302A; border: 1px solid #2C4A40; border-radius: 12px;
+    padding: 12px 14px; margin-bottom: 12px;
+  }
+  .team-score-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .team-score-name { font-size: 15px; font-weight: 700; }
+  .team-score-total {
+    font-size: 13.5px; font-weight: 700; color: #D9A954;
+    background: #2C4A40; padding: 3px 10px; border-radius: 20px;
+  }
+  .question-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;
+  }
+  .q-toggle {
+    aspect-ratio: 1; border-radius: 8px; border: 1px solid #3E5A50;
+    background: #1F3D34; color: #7E9A8F; font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .q-toggle.on {
+    background: #D9A954; border-color: #D9A954; color: #16302A;
+  }
+  .add-question-btn {
+    width: 100%; padding: 12px; border-radius: 10px;
+    border: 1px dashed #D9A954; background: transparent; color: #D9A954;
+    font-weight: 600; font-size: 14px; margin-top: 4px; margin-bottom: 18px;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .q-count-label { font-size: 12px; color: #9DB3A8; text-align: center; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQ0IiBmaWxsPSIjMTYzMDJBIi8+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI3OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDlBOTU0IiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9IjAuMzUiLz4KCiAgPCEtLSBPd2wgYm9keSAtLT4KICA8Zz4KICAgIDxlbGxpcHNlIGN4PSIxMDAiIGN5PSIxMjIiIHJ4PSI1NiIgcnk9IjUwIiBmaWxsPSIjRDlBOTU0Ii8+CgogICAgPCEtLSBleWVzIC0tPgogICAgPGNpcmNsZSBjeD0iNzgiIGN5PSIxMTIiIHI9IjIyIiBmaWxsPSIjMTYzMDJBIi8+CiAgICA8Y2lyY2xlIGN4PSIxMjIiIGN5PSIxMTIiIHI9IjIyIiBmaWxsPSIjMTYzMDJBIi8+CiAgICA8Y2lyY2xlIGN4PSI3OCIgY3k9IjExMiIgcj0iOSIgZmlsbD0iI0YyRUZFNiIvPgogICAgPGNpcmNsZSBjeD0iMTIyIiBjeT0iMTEyIiByPSI5IiBmaWxsPSIjRjJFRkU2Ii8+CgogICAgPCEtLSBiZWFrIC0tPgogICAgPHBhdGggZD0iTTEwMCAxMjYgTDExMSAxNDIgTDg5IDE0MiBaIiBmaWxsPSIjMTYzMDJBIi8+CgogICAgPCEtLSB3aW5ncyAtLT4KICAgIDxwYXRoIGQ9Ik00NiAxMjggQyA0MCAxNDgsIDQ2IDE2NCwgNjIgMTcwIEMgNTQgMTU0LCA1MiAxMzgsIDU4IDEyNCBaIiBmaWxsPSIjQjg4NjNFIi8+CiAgICA8cGF0aCBkPSJNMTU0IDEyOCBDIDE2MCAxNDgsIDE1NCAxNjQsIDEzOCAxNzAgQyAxNDYgMTU0LCAxNDggMTM4LCAxNDIgMTI0IFoiIGZpbGw9IiNCODg2M0UiLz4KICA8L2c+CgogIDwhLS0gZ3JhZHVhdGlvbiBjYXAgLS0+CiAgPGc+CiAgICA8cGF0aCBkPSJNMTAwIDM0IEwxNDYgNTQgTDEwMCA3NCBMNTQgNTQgWiIgZmlsbD0iI0YyRUZFNiIvPgogICAgPHBhdGggZD0iTTc2IDYwIEw3NiA3NCBDIDc2IDgyLCA4NyA4OCwgMTAwIDg4IEMgMTEzIDg4LCAxMjQgODIsIDEyNCA3NCBMMTI0IDYwIEwxMDAgNzAgWiIgZmlsbD0iI0YyRUZFNiIvPgogICAgPGxpbmUgeDE9IjE0NiIgeTE9IjU0IiB4Mj0iMTQ2IiB5Mj0iNzYiIHN0cm9rZT0iI0YyRUZFNiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSIxNDYiIGN5PSI4MCIgcj0iNCIgZmlsbD0iI0YyRUZFNiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="Zakovat" style="width:34px;height:34px;" /></div>
+  <div>
+    <h1 class="title">Zakovat Jurnali</h1>
+    <p class="subtitle">Haftalik zakovat • jamoa ballari</p>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="teams"><div class="tab-icon">👥</div>Jamoalar</button>
+  <button class="tab-btn" data-tab="entry"><div class="tab-icon">📅</div>Haftalik</button>
+  <button class="tab-btn" data-tab="results"><div class="tab-icon">🏆</div>Hisobot</button>
+</div>
+
+<div class="content">
+  <div id="tab-teams">
+    <div class="row">
+      <input class="text-input" id="new-team-input" placeholder="Jamoa nomi..." />
+      <button class="icon-btn-gold" id="add-team-btn">+</button>
+    </div>
+    <div id="teams-list"></div>
+  </div>
+
+  <div id="tab-entry" style="display:none;">
+    <div class="week-chips" id="week-chips"></div>
+    <div id="entry-body"></div>
+  </div>
+
+  <div id="tab-results" style="display:none;">
+    <button class="calc-btn" id="calc-btn">🧮 Hisoblash</button>
+    <div id="results-body"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var STORAGE_KEY = "zakovat-data-v3";
+  var DEFAULT_QUESTIONS = 20;
+  var state = { teams: [], weeks: [] };
+  var activeWeekId = null;
+  var showTotals = false;
+
+  function uid() {
+    return Math.random().toString(36).slice(2, 10);
+  }
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        var parsed = JSON.parse(raw);
+        state.teams = parsed.teams || [];
+        state.weeks = parsed.weeks || [];
+        if (state.weeks.length > 0) {
+          activeWeekId = state.weeks[state.weeks.length - 1].id;
+        }
+      }
+    } catch (e) {}
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {
+      console.error("Saqlashda xatolik:", e);
+    }
+  }
+
+  function escapeHtml(s) {
+    var div = document.createElement("div");
+    div.textContent = s;
+    return div.innerHTML;
+  }
+
+  // ---------- Tabs ----------
+  var tabButtons = document.querySelectorAll(".tab-btn");
+  var panels = {
+    teams: document.getElementById("tab-teams"),
+    entry: document.getElementById("tab-entry"),
+    results: document.getElementById("tab-results"),
+  };
+  function switchTab(name) {
+    tabButtons.forEach(function (b) {
+      b.classList.toggle("active", b.dataset.tab === name);
+    });
+    Object.keys(panels).forEach(function (k) {
+      panels[k].style.display = k === name ? "block" : "none";
+    });
+  }
+  tabButtons.forEach(function (b) {
+    b.addEventListener("click", function () { switchTab(b.dataset.tab); });
+  });
+
+  // ---------- Teams tab ----------
+  var newTeamInput = document.getElementById("new-team-input");
+  var addTeamBtn = document.getElementById("add-team-btn");
+  var teamsList = document.getElementById("teams-list");
+
+  function addTeam() {
+    var name = newTeamInput.value.trim();
+    if (!name) return;
+    state.teams.push({ id: uid(), name: name });
+    newTeamInput.value = "";
+    save();
+    renderAll();
+  }
+  addTeamBtn.addEventListener("click", addTeam);
+  newTeamInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") addTeam();
+  });
+
+  function removeTeam(id) {
+    state.teams = state.teams.filter(function (t) { return t.id !== id; });
+    state.weeks.forEach(function (w) { delete w.answers[id]; });
+    save();
+    renderAll();
+  }
+
+  function renderTeams() {
+    if (state.teams.length === 0) {
+      teamsList.innerHTML = '<div class="empty">Hali jamoa qo\'shilmagan. Yuqoridagi maydonga jamoa nomini yozing.</div>';
+      return;
+    }
+    teamsList.innerHTML = state.teams.map(function (team, i) {
+      return '<div class="team-item">' +
+        '<div class="team-left"><span class="badge">' + (i + 1) + '</span>' +
+        '<span class="team-name">' + escapeHtml(team.name) + '</span></div>' +
+        '<button class="del-btn" data-id="' + team.id + '">🗑</button></div>';
+    }).join("");
+    teamsList.querySelectorAll(".del-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () { removeTeam(btn.dataset.id); });
+    });
+  }
+
+  // ---------- Entry tab (per-question 0/1 scoring) ----------
+  var weekChips = document.getElementById("week-chips");
+  var entryBody = document.getElementById("entry-body");
+
+  function addWeek() {
+    var num = state.weeks.length + 1;
+    var w = { id: uid(), label: num + "-hafta", questionCount: DEFAULT_QUESTIONS, answers: {} };
+    state.weeks.push(w);
+    activeWeekId = w.id;
+    save();
+    switchTab("entry");
+    renderAll();
+  }
+
+  function removeWeek(id) {
+    state.weeks = state.weeks.filter(function (w) { return w.id !== id; });
+    if (activeWeekId === id) activeWeekId = null;
+    save();
+    renderAll();
+  }
+
+  function renameWeek(weekId, label) {
+    var w = state.weeks.find(function (w) { return w.id === weekId; });
+    if (w) w.label = label;
+    save();
+  }
+
+  function getAnswer(week, teamId, qIndex) {
+    var arr = week.answers[teamId];
+    if (!arr) return 0;
+    return arr[qIndex] || 0;
+  }
+
+  function toggleAnswer(week, teamId, qIndex) {
+    if (!week.answers[teamId]) week.answers[teamId] = [];
+    var arr = week.answers[teamId];
+    arr[qIndex] = arr[qIndex] ? 0 : 1;
+    save();
+  }
+
+  function weekTotalForTeam(week, teamId) {
+    var arr = week.answers[teamId] || [];
+    var sum = 0;
+    for (var i = 0; i < week.questionCount; i++) sum += (arr[i] || 0);
+    return sum;
+  }
+
+  function addQuestion(week) {
+    week.questionCount += 1;
+    save();
+    renderEntry();
+  }
+
+  function renderEntry() {
+    weekChips.innerHTML = state.weeks.map(function (w) {
+      return '<button class="chip' + (w.id === activeWeekId ? ' active' : '') + '" data-id="' + w.id + '">' +
+        escapeHtml(w.label) + '</button>';
+    }).join("") + '<button class="chip chip-add" id="add-week-btn">+ Yangi hafta</button>';
+
+    weekChips.querySelectorAll(".chip[data-id]").forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        activeWeekId = chip.dataset.id;
+        renderEntry();
+      });
+    });
+    document.getElementById("add-week-btn").addEventListener("click", addWeek);
+
+    var activeWeek = state.weeks.find(function (w) { return w.id === activeWeekId; });
+
+    if (!activeWeek) {
+      entryBody.innerHTML = '<div class="empty">Yangi hafta qo\'shing va o\'sha haftaning savollari uchun ball qo\'ying.</div>';
+      return;
+    }
+    if (state.teams.length === 0) {
+      entryBody.innerHTML = '<div class="empty">Avval \'Jamoalar\' bo\'limida jamoa qo\'shing.</div>';
+      return;
+    }
+
+    var html = '<div class="week-title-row">' +
+      '<input class="week-title-input" id="week-title-input" value="' + escapeHtml(activeWeek.label) + '" />' +
+      '<button class="del-btn" id="del-week-btn">🗑</button></div>';
+
+    html += '<p class="q-count-label">Jami ' + activeWeek.questionCount + ' ta savol • har biriga 0 yoki 1 ball</p>';
+
+    html += state.teams.map(function (team) {
+      var total = weekTotalForTeam(activeWeek, team.id);
+      var buttons = "";
+      for (var q = 0; q < activeWeek.questionCount; q++) {
+        var on = getAnswer(activeWeek, team.id, q) === 1;
+        buttons += '<button class="q-toggle' + (on ? ' on' : '') + '" data-team="' + team.id + '" data-q="' + q + '">' + (q + 1) + '</button>';
+      }
+      return '<div class="team-score-card">' +
+        '<div class="team-score-head"><span class="team-score-name">' + escapeHtml(team.name) + '</span>' +
+        '<span class="team-score-total">' + total + ' / ' + activeWeek.questionCount + '</span></div>' +
+        '<div class="question-grid">' + buttons + '</div></div>';
+    }).join("");
+
+    html += '<button class="add-question-btn" id="add-question-btn">➕ Yangi savol qo\'shish</button>';
+
+    entryBody.innerHTML = html;
+
+    document.getElementById("week-title-input").addEventListener("input", function (e) {
+      renameWeek(activeWeek.id, e.target.value);
+      var chip = weekChips.querySelector('.chip[data-id="' + activeWeek.id + '"]');
+      if (chip) chip.textContent = e.target.value;
+    });
+    document.getElementById("del-week-btn").addEventListener("click", function () {
+      removeWeek(activeWeek.id);
+    });
+    document.getElementById("add-question-btn").addEventListener("click", function () {
+      addQuestion(activeWeek);
+    });
+    entryBody.querySelectorAll(".q-toggle").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        toggleAnswer(activeWeek, btn.dataset.team, parseInt(btn.dataset.q, 10));
+        renderEntry();
+      });
+    });
+  }
+
+  // ---------- Results tab ----------
+  var calcBtn = document.getElementById("calc-btn");
+  var resultsBody = document.getElementById("results-body");
+
+  calcBtn.addEventListener("click", function () {
+    showTotals = true;
+    renderResults();
+  });
+
+  function renderResults() {
+    calcBtn.disabled = state.teams.length === 0;
+
+    if (!showTotals) {
+      resultsBody.innerHTML = '<div class="empty">\'Hisoblash\' tugmasini bosing — barcha haftalar bo\'yicha jamoalarning umumiy ballari chiqadi.</div>';
+      return;
+    }
+    if (state.teams.length === 0) {
+      resultsBody.innerHTML = '<div class="empty">Hali jamoa yo\'q.</div>';
+      return;
+    }
+
+    var totals = state.teams.map(function (team) {
+      var sum = state.weeks.reduce(function (acc, w) {
+        return acc + weekTotalForTeam(w, team.id);
+      }, 0);
+      return { id: team.id, name: team.name, total: sum };
+    }).sort(function (a, b) { return b.total - a.total; });
+
+    var html = '<p class="hint">Jami ' + state.weeks.length + ' ta hafta bo\'yicha hisoblandi</p>';
+    html += totals.map(function (team, i) {
+      var medal = i === 0 ? '👑' : i === 1 ? '🥈' : i === 2 ? '🥉' : '<span class="rank-num">' + (i + 1) + '</span>';
+      return '<div class="result-item' + (i === 0 ? ' first' : '') + '">' +
+        '<div class="team-left">' + medal +
+        '<span class="result-name' + (i === 0 ? ' first' : '') + '">' + escapeHtml(team.name) + '</span></div>' +
+        '<span class="result-total' + (i === 0 ? ' first' : '') + '">' + team.total + '</span></div>';
+    }).join("");
+
+    resultsBody.innerHTML = html;
+  }
+
+  function renderAll() {
+    renderTeams();
+    renderEntry();
+    renderResults();
+  }
+
+  load();
+  renderAll();
+})();
+</script>
+</body>
+</html>
